@@ -1,6 +1,7 @@
 import React from 'react';
-import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Card, CardImg, CardImgOverlay, CardText, Button, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import CommentForm from './CommentForm';
 
 function RenderComments({ comments }) {
     if (comments != null) {
@@ -49,6 +50,7 @@ function RenderDetails({ dish, comments }) {
                     <div className="col-12 col-md-5 m-1">
                         <h4>Comments:</h4>
                         <RenderComments comments={comments} />
+                        <CommentForm buttonLabel={"Submit Comment"}></CommentForm>                        
                     </div>
                 </div>
             </div>            
