@@ -3,7 +3,7 @@ import { Card, CardImg, CardImgOverlay, CardText, Button, CardTitle, Breadcrumb,
 import { Link } from 'react-router-dom';
 import CommentForm from './CommentForm';
 
-function RenderComments({ comments }) {
+function RenderComments({comments, addComment, dishId}) {
     if (comments != null) {
         return comments.map((comment) => {
             let date = new Date(comment.date)
@@ -50,7 +50,7 @@ function RenderDetails({ dish, comments }) {
                     <div className="col-12 col-md-5 m-1">
                         <h4>Comments:</h4>
                         <RenderComments comments={comments} />
-                        <CommentForm buttonLabel={"Submit Comment"}></CommentForm>                        
+                        <CommentForm buttonLabel={"Submit Comment"} ></CommentForm>                        
                     </div>
                 </div>
             </div>            
